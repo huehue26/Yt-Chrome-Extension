@@ -1,0 +1,14 @@
+{
+    "name": "Youtube user country",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Now yu can see country of a youtube user",
+    "browser_action": {
+      "default_title": "Yt user country",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
+  }
