@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 600px;
+    width: 400px;
+    padding: 15px;
+}
+
+.underline_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.underline_link .title {
+    font-size: 17px;
+    margin-right: 10px;
+    margin-top: 32px;
+}
+
+#show_flag .knobs:before,
+#show_flag .knobs:after,
+#show_flag .knobs span,
+#show_flag .knobs span:before,
+#show_flag .knobs span:after {
+    position: absolute;
+    top: 1px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+}
+
+#show_flag .knobs:before {
+    left: 4px;
+}
+
+#show_flag .knobs:after {
+    font-size:16px;
+    right: 4px;
+}
+
+#show_flag .knobs:before,
+#show_flag .knobs:after {
+    padding: 9px 3px;
+    z-index: 1;
+}
+
+#show_flag .knobs span {
+    display: inline-block;
+    z-index: 2;
+}
+
+#show_flag .knobs span,
+#show_flag .knobs span:before,
+#show_flag .knobs span:after {
+    width: 16px;
+    height: 5px;
+    padding: 8px 2px;
+}
+
+#show_flag .knobs span:before,
+#show_flag .knobs span:after {
+    content: '';
+    top: 0;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.20);
+}
+
+#show_flag .knobs span:before {
+    left: 3px;
+    background-color: #fff;
+}
+
+#show_flag .knobs span:after {
+    right: -60px;
+    background-color: #fff;
+}
+
+#show_flag .checkbox:checked+.knobs span:before {
+    left: -28px;
+}
+
+#show_flag .checkbox:checked+.knobs span:after {
+    right: -27px;
+}
+
+#show_flag .checkbox:checked~.layer {
+    background-color: #4ebce7;
+}
+
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    width: 45px;
+    height: 23px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #d3d3d3;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
