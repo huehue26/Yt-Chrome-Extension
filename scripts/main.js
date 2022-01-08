@@ -27,14 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
-    var ccolor = document.getElementById("color_checkbox")
+    var ccolor = document.getElementById("size_checkbox")
     if (ccolor) {
         ccolor.addEventListener("click", () => {
             if (ccolor.checked == true) {
                 chrome.tabs.executeScript({
-                    file: "scripts/change_size.js"
+                    file: "scripts/sameSize.js"
                 })
-
             } else {
                 chrome.tabs.executeScript({
                     file: "scripts/sameSize.js"
