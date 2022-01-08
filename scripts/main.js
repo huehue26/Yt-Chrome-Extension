@@ -3,15 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
     if (showFlag) {
         showFlag.addEventListener("click", () => {
             if (showFlag.checked == true) {
-                chrome.tabs.executeScript({
-                    file: "scripts/show_flag.js"
-                })
-                showsFlag()
+                setInterval(() => {
+                    removeFlag()
+                    displayFlag()
+                }, 10000);
             } else {
-                chrome.tabs.executeScript({
-                    file: "scripts/remove_flag.js"
-                })
+                removeFlag()
             }
         })
     }
 })
+
+function displayFlag() {
+    chrome.tabs.executeScript({
+        file: "scripts/show_flag.js"
+    })
+}
+
+function removeFlag() {
+    chrome.tabs.executeScript({
+        file: "scripts/remove_flag.js"
+    })
+}
