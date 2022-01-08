@@ -27,12 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
     var ccolor = document.getElementById("size_checkbox")
     if (ccolor) {
         ccolor.addEventListener("click", () => {
             if (ccolor.checked == true) {
+                chrome.storage.sync.set({ 'font_size': document.getElementById('font-size').value })
                 chrome.tabs.executeScript({
-                    file: "scripts/sameSize.js"
+                    file: "scripts/change_size.js"
                 })
             } else {
                 chrome.tabs.executeScript({
@@ -41,4 +43,5 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
 })
