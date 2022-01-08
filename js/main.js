@@ -17,13 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
     var theater = document.getElementById("theater_checkbox")
     if (theater) {
         theater.addEventListener("click", () => {
-            if (theater.checked == true && window.location.href.length >= 20) {
+            if (theater.checked == true) {
                 chrome.tabs.executeScript({
                     file: "scripts/theaterEffectOn.js"
                 })
             } else {
                 chrome.tabs.executeScript({
                     file: "scripts/theaterEffectOff.js"
+                })
+            }
+        })
+    }
+
+    var concentration = document.getElementById("concentration_checkbox")
+    if (concentration) {
+        concentration.addEventListener("click", () => {
+            if (concentration.checked == true) {
+                chrome.tabs.executeScript({
+                    file: "scripts/concEffectOn.js"
+                })
+            } else {
+                chrome.tabs.executeScript({
+                    file: "scripts/concEffectOff.js"
                 })
             }
         })
