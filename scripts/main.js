@@ -13,4 +13,33 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+    var cfont = document.getElementById("font_checkbox")
+    if (cfont) {
+        cfont.addEventListener("click", () => {
+            if (cfont.checked == true) {
+                chrome.tabs.executeScript({
+                    file: "scripts/change_font.js"
+                })
+            } else {
+                chrome.tabs.executeScript({
+                    file: "scripts/sameFont.js"
+                })
+            }
+        })
+    }
+    var ccolor = document.getElementById("color_checkbox")
+    if (ccolor) {
+        ccolor.addEventListener("click", () => {
+            if (ccolor.checked == true) {
+                chrome.tabs.executeScript({
+                    file: "scripts/change_size.js"
+                })
+
+            } else {
+                chrome.tabs.executeScript({
+                    file: "scripts/sameSize.js"
+                })
+            }
+        })
+    }
 })
