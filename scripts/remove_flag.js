@@ -1,6 +1,5 @@
 // selecting video from the page
 var links = document.querySelectorAll('div#byline-container')
-console.log(links.length)
 for (var i = 0; i < links.length; i++) {
     var images = links[i].getElementsByTagName('img')
     var l = images.length;
