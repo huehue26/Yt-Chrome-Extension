@@ -13,6 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
+    var theater = document.getElementById("theater_checkbox")
+    if (theater) {
+        theater.addEventListener("click", () => {
+            if (theater.checked == true && window.location.href.length >= 20) {
+                chrome.tabs.executeScript({
+                    file: "scripts/theaterEffectOn.js"
+                })
+            } else {
+                chrome.tabs.executeScript({
+                    file: "scripts/theaterEffectOff.js"
+                })
+            }
+        })
+    }
+
     var cfont = document.getElementById("font_checkbox")
     if (cfont) {
         cfont.addEventListener("click", () => {

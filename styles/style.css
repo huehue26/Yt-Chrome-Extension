@@ -5,10 +5,20 @@
 }
 
 body {
-    height: 200px;
+    height: 270px;
     width: 300px;
-    padding: 15px;
-    background-color: rgb(246, 246, 238);
+    padding: 10px;
+    background-color: rgb(238, 253, 251);
+    font-family: arial;
+    border: 2px solid black;
+    /* border-radius: 10px; */
+    color: rgb(66, 65, 65);
+}
+
+#container h3 {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .underline_link {
