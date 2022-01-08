@@ -35,6 +35,8 @@ if (site_link.length === 24) {
         }
     }
 } else if (site_link.length === 43) {
+
+    // adding flag to the suggested videos
     var links = document.querySelectorAll('div#dismissible')
     for (let i = 0; i < links.length; i++) {
         var videoTitle = links[i].querySelector('div.metadata')
@@ -67,5 +69,4 @@ if (site_link.length === 24) {
             }
         }
     }
-
 }
