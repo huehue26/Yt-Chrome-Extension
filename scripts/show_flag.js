@@ -1,5 +1,5 @@
 
-var apiKey="AIzaSyB0rBKSzFziVKcMkjqcsrNdRLEjohwLnRM"
+var apiKey = "AIzaSyB0rBKSzFziVKcMkjqcsrNdRLEjohwLnRM"
 
 // selecting video from the page
 var links = document.querySelectorAll('div#meta')
@@ -7,7 +7,7 @@ for (let i = 0; i < links.length; i++) {
     var videoTitle = links[i].querySelector('h3')
     var videoLink = videoTitle.querySelector('a')
     var x = String(videoLink)
-    var videoId = x.slice(32,43)
+    var videoId = x.slice(32, 43)
 
     // getting channel id from video
     const getChannelId = async () => {
@@ -26,9 +26,8 @@ for (let i = 0; i < links.length; i++) {
 
     const displayChannelsCountryFlag = async (countryCode) => {
         var channelTitle = links[i].querySelector('#byline-container')
-        console.log(channelTitle)
-        var img = new Image(23,12) 
-        img.src = `https://countryflagsapi.com/png/${countryCode}`
-        channelTitle.appendChild(img);
+        var image = new Image(23, 12)
+        image.src = `https://countryflagsapi.com/svg/${countryCode}`
+        channelTitle.appendChild(image);
     }
 }

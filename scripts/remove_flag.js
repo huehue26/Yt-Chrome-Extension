@@ -1,7 +1,10 @@
-var links = document.getElementsByTagName("a")
-
-for (let i = 0; i < links.length; i++) {
-    if (links[i].style.textDecoration === "underline") {
-        links[i].style.textDecoration = "none"
+// selecting video from the page
+var links = document.querySelectorAll('div#byline-container')
+console.log(links.length)
+for (var i = 0; i < links.length; i++) {
+    var images = links[i].getElementsByTagName('img')
+    var l = images.length;
+    for (var j = 0; j < l; j++) {
+        images[0].parentNode.removeChild(images[0]);
     }
 }

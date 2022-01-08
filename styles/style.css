@@ -5,8 +5,8 @@
 }
 
 body {
-    height: 600px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     padding: 15px;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 #show_flag .knobs:after {
-    font-size:16px;
+    font-size: 16px;
     right: 4px;
 }
 
