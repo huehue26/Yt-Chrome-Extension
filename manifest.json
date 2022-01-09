@@ -5,10 +5,23 @@
     "description": "Now yu can see country of a youtube user",
     "browser_action": {
       "default_title": "Yt user country",
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon":"—Pngtree—youtube logo transparent png_5990834.png"
     },
+    "background":{
+      "scripts":["eventPage.js"],
+      "persistent": false
+    },
+    "content_scripts":[
+      {
+        "matches":["https://www.youtube.com/*"],
+        "js":["/js/main.js"],
+        "css":["utube.css"]
+      }
+    ],
     "permissions": [
       "activeTab",
-      "storage"
+      "storage",
+      "https://www.youtube.com/*"
     ]
   }

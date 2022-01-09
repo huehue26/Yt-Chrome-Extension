@@ -1,0 +1,7 @@
+#logo-icon{
+    color:"red";
+}
+.style-scope,#container,.ytd-channel-name{
+    font-weight: bold;
+    /* color: rgb(218, 86, 86); */
+}
