@@ -63,10 +63,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ccolor) {
         ccolor.addEventListener("click", () => {
             if (ccolor.checked == true) {
-                chrome.storage.sync.set({ 'font_size': document.getElementById('font-size').value })
-                chrome.tabs.executeScript({
-                    file: "scripts/change_size.js"
-                })
+                let x = document.getElementById('font-size').value;
+                if (x < 30) {
+                    chrome.storage.sync.set({ 'font_size': x })
+                    chrome.tabs.executeScript({
+                        file: "scripts/change_size.js"
+                    })
+                }
+                else {
+                    alert("This value is not user-experience rich! ")
+                }
             } else {
                 chrome.tabs.executeScript({
                     file: "scripts/sameSize.js"
